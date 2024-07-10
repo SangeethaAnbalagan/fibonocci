@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci series</title>
+   
+   <script>
+        function sumOf(){
+           
+            const limit=parseInt(document.getElementById("input").value);
+           
+    let prev = 0;
+    let curr = 1;
+    let sum = 0;
+
+   
+    let totalSum = 0;
+
+    
+    while (curr <= limit) {
+        sum = prev + curr; 
+        prev = curr;
+        curr = sum; 
+
+        totalSum += prev; 
+        console.log("sum="+totalSum);
+    }
+
+  
+        }
+
+</script>
+</head>
+<body>
+    <center>
+        <h1>Finding sum of fibonacci series</h1>
+        <hr>
+        <input type="number" id="input" placeholder="Enter a limit"><br><br>
+        <input type="button" id="output" value="sum" onclick="sumOf()">
+    </center>
+</body>
+</html>
